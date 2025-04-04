@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - BreakThrough Tech Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="logo-text">
+                <h1>BreakThrough<span>Tech</span></h1>
+                <span class="logo-tagline">Empowering Future Developers</span>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="courses.html" class="active">Courses</a>
+            <a href="index.html#about-section">About</a>
+            <a href="contact.html">Contact</a>
+            <button id="darkModeToggle" class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Courses Header -->
+    <header class="page-header">
+        <div class="header-content">
+            <h1>Our Courses</h1>
+            <p>Explore our comprehensive range of tech courses designed to boost your career</p>
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <section class="search-section">
+        <div class="search-container">
+            <input type="text" id="courseSearch" placeholder="Search courses..." oninput="searchCourses(this.value)">
+            <button id="searchBtn" onclick="searchCourses(document.getElementById('courseSearch').value)">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Featured Courses -->
+    <section class="featured-courses">
+        <h2><i class="fas fa-graduation-cap course-title-icon"></i> Featured Courses</h2>
+        <div class="course-grid" id="courseGrid">
+            <!-- Web Development Course -->
+            <div class="course-card" data-course-name="Web Development Fundamentals">
+                <div class="course-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <img src="images/webdvpt.jpg" 
+                     alt="Web Development" 
+                     loading="lazy"
+                     width="250"
+                     height="140">
+                <div class="course-info">
+                    <h3><i class="fas fa-laptop-code"></i> Web Development Fundamentals</h3>
+                    <p>Learn HTML, CSS, and JavaScript to build responsive websites</p>
+                    <div class="course-meta">
+                        <span class="course-duration"><i class="fas fa-clock"></i> 12 Weeks</span>
+                        <span><i class="fas fa-star"></i> 4.8/5</span>
+                        <span><i class="fas fa-users"></i> 2.5k+ enrolled</span>
+                    </div>
+                    <button class="enroll-btn" onclick="enrollCourse('web-dev-101')">
+                        <i class="fas fa-sign-in-alt"></i> Enroll Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Data Science Course -->
+            <div class="course-card" data-course-name="Data Science & Analytics">
+                <div class="course-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=250&q=70" 
+                     alt="Data Science" 
+                     loading="lazy"
+                     width="250"
+                     height="140">
+                <div class="course-info">
+                    <h3><i class="fas fa-chart-bar"></i> Data Science & Analytics</h3>
+                    <p>Master data analysis, visualization, and machine learning</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 10 weeks</span>
+                        <span><i class="fas fa-star"></i> 4.9/5</span>
+                        <span><i class="fas fa-users"></i> 1.8k+ enrolled</span>
+                    </div>
+                    <button class="enroll-btn" onclick="enrollCourse('data-science')">
+                        <i class="fas fa-sign-in-alt"></i> Enroll Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Development Course -->
+            <div class="course-card" data-course-name="Mobile App Development">
+                <div class="course-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=250&q=70" 
+                     alt="Mobile App Development" 
+                     loading="lazy"
+                     width="250"
+                     height="140">
+                <div class="course-info">
+                    <h3><i class="fas fa-mobile-screen"></i> Mobile App Development</h3>
+                    <p>Create cross-platform mobile applications with React Native</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 12 weeks</span>
+                        <span><i class="fas fa-star"></i> 4.7/5</span>
+                        <span><i class="fas fa-users"></i> 1.5k+ enrolled</span>
+                    </div>
+                    <button class="enroll-btn" onclick="enrollCourse('mobile-dev')">
+                        <i class="fas fa-sign-in-alt"></i> Enroll Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- UI/UX Design Course -->
+            <div class="course-card" data-course-name="UI/UX Design">
+                <div class="course-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=250&q=70" 
+                     alt="UI/UX Design" 
+                     loading="lazy"
+                     width="250"
+                     height="140">
+                <div class="course-info">
+                    <h3><i class="fas fa-palette"></i> UI/UX Design</h3>
+                    <p>Learn modern design principles and create stunning interfaces</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 10 weeks</span>
+                        <span><i class="fas fa-star"></i> 4.9/5</span>
+                        <span><i class="fas fa-users"></i> 1.2k+ enrolled</span>
+                    </div>
+                    <button class="enroll-btn" onclick="enrollCourse('ui-ux')">
+                        <i class="fas fa-sign-in-alt"></i> Enroll Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Cybersecurity Course -->
+            <div class="course-card" data-course-name="Cybersecurity Fundamentals">
+                <div class="course-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=250&q=70" 
+                     alt="Cybersecurity" 
+                     loading="lazy"
+                     width="250"
+                     height="140">
+                <div class="course-info">
+                    <h3><i class="fas fa-lock"></i> Cybersecurity Fundamentals</h3>
+                    <p>Master the essentials of network security and ethical hacking</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 14 weeks</span>
+                        <span><i class="fas fa-star"></i> 4.8/5</span>
+                        <span><i class="fas fa-users"></i> 900+ enrolled</span>
+                    </div>
+                    <button class="enroll-btn" onclick="enrollCourse('cybersecurity')">
+                        <i class="fas fa-sign-in-alt"></i> Enroll Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Cloud Computing Course -->
+            <div class="course-card" data-course-name="Cloud Computing">
+                <div class="course-icon">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=250&q=70" 
+                     alt="Cloud Computing" 
+                     loading="lazy"
+                     width="250"
+                     height="140">
+                <div class="course-info">
+                    <h3><i class="fas fa-server"></i> Cloud Computing</h3>
+                    <p>Learn AWS, Azure, and cloud infrastructure management</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 12 weeks</span>
+                        <span><i class="fas fa-star"></i> 4.7/5</span>
+                        <span><i class="fas fa-users"></i> 1.1k+ enrolled</span>
+                    </div>
+                    <button class="enroll-btn" onclick="enrollCourse('cloud-computing')">
+                        <i class="fas fa-sign-in-alt"></i> Enroll Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Advanced JavaScript -->
+            <div class="course-card" data-course-name="Advanced JavaScript">
+                <div class="course-icon">
+                    <i class="fab fa-js"></i>
+                </div>
+                <img src="https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=250&q=70" 
+                     alt="Advanced JavaScript" 
+                     loading="lazy"
+                     width="250"
+                     height="140">
+                <div class="course-info">
+                    <h3><i class="fab fa-js"></i> Advanced JavaScript</h3>
+                    <p>Deep dive into ES6+, async programming, and JavaScript design patterns</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 12 weeks</span>
+                        <span><i class="fas fa-star"></i> 4.9/5</span>
+                        <span><i class="fas fa-users"></i> 2.1k+ enrolled</span>
+                    </div>
+                    <button class="enroll-btn" onclick="enrollCourse('advanced-js')">
+                        <i class="fas fa-sign-in-alt"></i> Enroll Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- React.js Development -->
+            <div class="course-card" data-course-name="React.js Development">
+                <div class="course-icon">
+                    <i class="fab fa-react"></i>
+                </div>
+                <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=250&q=70" 
+                     alt="React.js Development" 
+                     loading="lazy"
+                     width="250"
+                     height="140">
+                <div class="course-info">
+                    <h3><i class="fab fa-react"></i> React.js Development</h3>
+                    <p>Build modern web applications with React.js and its ecosystem</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 14 weeks</span>
+                        <span><i class="fas fa-star"></i> 4.9/5</span>
+                        <span><i class="fas fa-users"></i> 2.8k+ enrolled</span>
+                    </div>
+                    <button class="enroll-btn" onclick="enrollCourse('react-js')">
+                        <i class="fas fa-sign-in-alt"></i> Enroll Now
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="view-all-container">
+            <a href="courses.html" class="view-all-btn">View All Courses <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <script>
+        // Course Search Functionality
+        function searchCourses(searchTerm) {
+            const courseCards = document.querySelectorAll('.course-card');
+            let hasResults = false;
+            
+            // Convert search term to lowercase for case-insensitive comparison
+            searchTerm = searchTerm.toLowerCase().trim();
+            
+            courseCards.forEach(card => {
+                // Get course name from data attribute or title
+                const courseName = card.getAttribute('data-course-name') || 
+                                  card.querySelector('h3').textContent;
+                
+                // Check if course name matches search term
+                if (courseName.toLowerCase().includes(searchTerm) || searchTerm === '') {
+                    card.style.display = '';
+                    hasResults = true;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Show/hide no results message
+            const noResultsMsg = document.querySelector('.no-results-message');
+            const courseGrid = document.getElementById('courseGrid');
+            
+            if (!hasResults && searchTerm !== '') {
+                if (!noResultsMsg) {
+                    const noResultsDiv = document.createElement('div');
+                    noResultsDiv.className = 'no-results-message';
+                    noResultsDiv.innerHTML = `
+                        <div class="no-results-content">
+                            <i class="fas fa-search fa-3x"></i>
+                            <h3>No courses found</h3>
+                            <p>Try different search terms</p>
+                            <button onclick="resetSearch()" class="reset-search-btn">
+                                Show All Courses
+                            </button>
+                        </div>
+                    `;
+                    courseGrid.appendChild(noResultsDiv);
+                }
+            } else if (noResultsMsg) {
+                noResultsMsg.remove();
+            }
+        }
+        
+        // Reset search to show all courses
+        function resetSearch() {
+            const searchInput = document.getElementById('courseSearch');
+            searchInput.value = '';
+            searchCourses('');
+        }
+        
+        // Initialize search on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set up event listeners
+            const searchInput = document.getElementById('courseSearch');
+            const searchBtn = document.getElementById('searchBtn');
+            
+            // Search as you type
+            searchInput.addEventListener('input', function() {
+                searchCourses(this.value);
+            });
+            
+            // Search when button is clicked
+            searchBtn.addEventListener('click', function() {
+                searchCourses(searchInput.value);
+            });
+            
+            // Search when Enter key is pressed
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchCourses(this.value);
+                }
+            });
+            
+            // Initialize with all courses visible
+            searchCourses('');
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@breakthrough.tech</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/darkMode.js"></script>
+    <script src="js/enrollment.js"></script>
+</body>
+</html>

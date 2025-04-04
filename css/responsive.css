@@ -1,0 +1,86 @@
+/* Responsive Styles */
+
+/* For tablets */
+@media screen and (max-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* For mobile phones */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: var(--background-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        transition: var(--transition);
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-links a {
+        margin: 1rem 0;
+    }
+    
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--text-color);
+        margin: 5px 0;
+        transition: var(--transition);
+    }
+    
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .page-header {
+        height: 30vh;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+} 

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BreakThrough Tech Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add AOS library for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+        
+</head>
+<body class="light-mode">
+  
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="logo-text">
+                <h1>BreakThrough<span>Tech</span></h1>
+                <span class="logo-tagline">Empowering Future Developers</span>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="#about-section">About</a>
+            <a href="contact.html">Contact</a>
+            <button id="darkModeToggle" class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Moving Images -->
+    <header class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <img src="images/hero1.jpg">
+            </div>
+            <div class="hero-slide">
+                <img src="images/hero2.jpg">
+            </div>
+            <div class="hero-slide">
+                <img src="images/hero3.jpg">
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1>A Software Skilling Academy</h1>
+            <p>Break through limits. Build the future</p>
+            <div class="hero-buttons">
+                <a href="courses.html" class="cta-button">Browse Courses</a>
+                <a href="#featured-courses" class="cta-button">View Featured Courses</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Courses with unique images -->
+    <section id="featured-courses" class="featured-courses">
+        <h2>Featured Courses</h2>
+        <div class="course-grid">
+            <!-- Backend Development -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg" 
+                         alt="Backend Development"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzIwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2YwZjBmMCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM2NjY2NjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5CYWNrZW5kIERldmVsb3BtZW50PC90ZXh0Pjwvc3ZnPg=='">
+                    <div class="course-badge">🎓 Scholarship Available</div>
+                </div>
+                <div class="course-info">
+                    <h3>Backend Development</h3>
+                    <p>Build reliable and scalable server-side apps that power web applications</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 12 weeks</span>
+                        <span><i class="fas fa-tag"></i> UGX 400K</span>
+                    </div>
+                    <div class="course-dates">
+                        <p>Starts: 6th June 2025</p>
+                        <p>Deadline: 30th May 2025</p>
+                    </div>
+                    <a href="courses.html" class="btn">Register Now</a>
+                </div>
+            </div>
+
+            <!-- Frontend Development -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://cdn.pixabay.com/photo/2015/09/09/19/56/office-932926_1280.jpg" 
+                         alt="Frontend Development"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzIwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2YwZjBmMCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM2NjY2NjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5Gcm9udGVuZCBEZXZlbG9wbWVudDwvdGV4dD48L3N2Zz4='">
+                    <div class="course-badge">🎓 Scholarship Available</div>
+                </div>
+                <div class="course-info">
+                    <h3>Frontend Development</h3>
+                    <p>Design and develop visually stunning, responsive web applications</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 12 weeks</span>
+                        <span><i class="fas fa-tag"></i> UGX 350K</span>
+                    </div>
+                    <div class="course-dates">
+                        <p>Starts: 6th June 2025</p>
+                        <p>Deadline: 30th May 2025</p>
+                    </div>
+                    <a href="courses.html" class="btn">Register Now</a>
+                </div>
+            </div>
+
+            <!-- Database Administration -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://cdn.pixabay.com/photo/2017/07/31/11/31/laptop-2557468_1280.jpg" 
+                         alt="Database Administration"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzIwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2YwZjBmMCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM2NjY2NjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5EYXRhYmFzZSBBZG1pbmlzdHJhdGlvbjwvdGV4dD48L3N2Zz4='">
+                    <div class="course-badge">🎓 Scholarship Available</div>
+                </div>
+                <div class="course-info">
+                    <h3>Database Administration</h3>
+                    <p>Master database design, optimization, and management</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 12 weeks</span>
+                        <span><i class="fas fa-tag"></i> UGX 500K</span>
+                    </div>
+                    <div class="course-dates">
+                        <p>Starts: 6th June 2025</p>
+                        <p>Deadline: 30th May 2025</p>
+                    </div>
+                    <a href="courses.html" class="btn">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-section" class="about-section">
+        <h2>What We Do</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>BreakThroughTech Academy empowers young African tech talent with the skills to excel in the global tech ecosystem. Through immersive, project-based training, we prepare youth for real-world challenges and connect them to local and global opportunities.</p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Students Trained</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">85%</span>
+                        <span class="stat-label">Employment Rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Partner Companies</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>Student Success Stories</h2>
+        <div class="testimonial-carousel">
+            <!-- Testimonials will be populated by JavaScript -->
+        </div>
+        <div class="carousel-controls">
+            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="faq-icon">Q</div>
+                    <h3>What courses do you offer?</h3>
+                    <div class="toggle-btn"></div>
+                </div>
+                <div class="faq-answer">
+                    <div class="answer-content">
+                        <div class="faq-icon">A</div>
+                        <p>We offer a variety of tech courses including Frontend Development, Backend Development, and Database Administration. Each course is designed to provide practical, industry-relevant skills.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="faq-icon">Q</div>
+                    <h3>How long are the courses?</h3>
+                    <div class="toggle-btn"></div>
+                </div>
+                <div class="faq-answer">
+                    <div class="answer-content">
+                        <div class="faq-icon">A</div>
+                        <p>Most of our courses run for 12 weeks. We offer both full-time and part-time options to accommodate different schedules.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="faq-icon">Q</div>
+                    <h3>Are there any prerequisites?</h3>
+                    <div class="toggle-btn"></div>
+                </div>
+                <div class="faq-answer">
+                    <div class="answer-content">
+                        <div class="faq-icon">A</div>
+                        <p>While specific prerequisites vary by course, most require basic computer literacy and English proficiency. Some advanced courses may require prior programming experience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="faq-icon">Q</div>
+                    <h3>What is the cost of the courses?</h3>
+                    <div class="toggle-btn"></div>
+                </div>
+                <div class="faq-answer">
+                    <div class="answer-content">
+                        <div class="faq-icon">A</div>
+                        <p>Course fees range from UGX 350K to UGX 500K. We offer flexible payment plans and scholarship opportunities for eligible students.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="faq-icon">Q</div>
+                    <h3>Do you offer job placement assistance?</h3>
+                    <div class="toggle-btn"></div>
+                </div>
+                <div class="faq-answer">
+                    <div class="answer-content">
+                        <div class="faq-icon">A</div>
+                        <p>Yes, we provide career support including resume building, interview preparation, and connections to our network of hiring partners.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> info@breakthrougtech.academy</p>
+                <p><i class="fas fa-phone"></i> +256 700 910 006</p>
+                <p><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="#about-section">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <a href="https://wa.me/256700910006" class="whatsapp-button">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BreakThroughTech Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/darkMode.js"></script>
+    <script src="js/testimonials.js"></script>
+    <script src="js/faq.js"></script>
+</body>
+</html>
